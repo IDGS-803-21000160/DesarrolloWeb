@@ -1,0 +1,36 @@
+<div class="col">
+  <h3>Registro De Empleados</h3>
+  <hr />
+  <form (submit)="agregarEmpleado()">
+    <input
+      type="text"
+      placeholder="Nombre"
+      name="nombre"
+      [(ngModel)]="nuevo.nombre"
+    />
+    <input
+      type="mail"
+      placeholder="Correo"
+      name="correo"
+      [(ngModel)]="nuevo.correo"
+    />
+    <input
+      type="number"
+      placeholder="Telefono"
+      name="telefono"
+      [(ngModel)]="nuevo.telefono"
+    />
+    <input
+      type="date"
+      placeholder="fechaNacimiento"
+      name="fechaNacimiento"
+      [(ngModel)]="nuevo.fechaNacimiento"
+    />
+    <select name="sexo" [(ngModel)]="nuevo.sexo">
+      <option value="Hombre" selected>Hombre</option>
+      <option value="Mujer">Mujer</option>
+      <option value="Otro">Otro</option>
+    </select>
+    <button type="submit">Agregar</button>
+  </form>
+</div>
